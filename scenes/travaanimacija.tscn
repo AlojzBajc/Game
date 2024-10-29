@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://u47wimqhar8p"]
+
+[ext_resource type="Texture2D" uid="uid://bg7cyf3pt4ks0" path="res://assets/sprites/travaanimacija.png" id="1_ittw5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa8gj"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_821mx"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yo36"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcv5t"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjnm2"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a0ia"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(160, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7shl"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(192, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdblk"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(224, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpuf0"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(256, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr2uq"]
+atlas = ExtResource("1_ittw5")
+region = Rect2(288, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqceh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa8gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_821mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yo36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcv5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjnm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a0ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7shl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdblk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpuf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr2uq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="travaanimacija" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jqceh")
+autoplay = "default"
+frame_progress = 0.251005
