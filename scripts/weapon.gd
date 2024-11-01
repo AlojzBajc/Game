@@ -1,6 +1,6 @@
 extends Node2D
 
-# Referenca na bullet (nastavi v inspectorju)
+# Referenca na bullet (nastavi v inspectorju) - test
 @export var bullet_scene: PackedScene
 
 func _process(delta: float) -> void:
