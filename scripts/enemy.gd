@@ -7,10 +7,10 @@ extends CharacterBody2D
 
 var DIRECTION: int = 1
 @onready var GROUNDCHECK = $RayCast2D
-var timer: Timer
 
 func _ready() -> void:
 	timer = Timer.new()
+	add_child(timer)
 	timer.wait_time = JUMP_INTERVAL
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
