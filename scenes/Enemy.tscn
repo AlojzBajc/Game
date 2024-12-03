@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgnupmsgvt2j3"]
+
+[ext_resource type="Texture2D" uid="uid://dhv0xrjswlak5" path="res://assets/sprites/slime_purple.png" id="1_olp5m"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_yetq2"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="3_i8p6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs3ay"]
+size = Vector2(10, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21tlc"]
+atlas = ExtResource("1_olp5m")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56kan"]
+atlas = ExtResource("1_olp5m")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sjws"]
+atlas = ExtResource("1_olp5m")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usxmv"]
+atlas = ExtResource("1_olp5m")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u7t1r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21tlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56kan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sjws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usxmv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_yetq2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(0, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_rs3ay")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_u7t1r")
+autoplay = "default"
+flip_h = true
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+process_callback = 0
+wait_time = 0.998
+autostart = true
+script = ExtResource("3_i8p6c")

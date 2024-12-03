@@ -171,6 +171,7 @@ collision_mask = 2
 script = ExtResource("1_4jm6s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_dxiqk")
 autoplay = "default"
 frame_progress = 0.7022

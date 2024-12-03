@@ -9,10 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://gb0jxpg713uy" path="res://scenes/bullet.tscn" id="7_klgcw"]
 [ext_resource type="PackedScene" uid="uid://d36tb020fc4ry" path="res://scenes/arms.tscn" id="8_xka4x"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rw4p6"]
-radius = 6.0
-height = 28.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2buh"]
 atlas = ExtResource("3_yqc35")
 region = Rect2(0, 0, 16, 32)
@@ -304,13 +300,23 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rw4p6"]
+radius = 6.0
+height = 28.0
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_debbm")
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(0, -14)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-18, -32)
+sprite_frames = SubResource("SpriteFrames_pfa57")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+offset = Vector2(10, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -14)
@@ -334,13 +340,5 @@ bullet_scene = ExtResource("7_klgcw")
 
 [node name="bullets" type="Node2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-18, -32)
-sprite_frames = SubResource("SpriteFrames_pfa57")
-animation = &"idle"
-autoplay = "idle"
-centered = false
-offset = Vector2(10, 0)
-
 [node name="Arms" parent="." instance=ExtResource("8_xka4x")]
-position = Vector2(1, -10)
+position = Vector2(2, -11)
