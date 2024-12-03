@@ -13,7 +13,7 @@ func _ready() -> void:
 	timer = Timer.new()
 	timer.wait_time = JUMP_INTERVAL
 	timer.start()
-	timer.connect("timeout", self, "_on_timer_timeout")
+	timer.timeout.connect(_on_timer_timeout)
 
 func _physics_process(delta: float) -> void:
 	# Gravitacija
