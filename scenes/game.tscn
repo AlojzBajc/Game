@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bxget5s0vh8u1" path="res://assets/sprites/parallax-forest-front-trees.png" id="19_vceon"]
 [ext_resource type="PackedScene" uid="uid://ro12lmxmvme4" path="res://scenes/moai.tscn" id="23_wkptj"]
 [ext_resource type="Script" path="res://scripts/DayNightCycle.gd" id="24_yl4tj"]
-[ext_resource type="PackedScene" uid="uid://dgnupmsgvt2j3" path="res://scenes/enemy.tscn" id="27_lsl8l"]
+[ext_resource type="PackedScene" uid="uid://dgnupmsgvt2j3" path="res://scenes/Enemy.tscn" id="27_lsl8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gug2i"]
 texture = ExtResource("5_nbbhj")

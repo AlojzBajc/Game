@@ -46,6 +46,13 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_yetq2")
 
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+process_callback = 0
+wait_time = 2.588
+autostart = true
+script = ExtResource("3_i8p6c")
+
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -6)
 target_position = Vector2(0, 17)
@@ -60,9 +67,4 @@ sprite_frames = SubResource("SpriteFrames_u7t1r")
 autoplay = "default"
 flip_h = true
 
-[node name="Timer" type="Timer" parent="."]
-process_mode = 3
-process_callback = 0
-wait_time = 0.998
-autostart = true
-script = ExtResource("3_i8p6c")
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,8 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED: float = 50.0
 @export var GRAVITY: float = 500.0
-@export var JUMP_FORCE: float = -300.0 # Sila skoka
-@export var JUMP_INTERVAL: float = 1.5 # Interval med skoki
+@export var JUMP_FORCE: float = -160.0 # Sila skoka
 
 var DIRECTION: int = 1
 @onready var GROUNDCHECK = $RayCast2D
@@ -32,6 +31,3 @@ func _physics_process(delta: float) -> void:
 func update_raycast_direction():
 	# Posodobi smer raycasta
 	GROUNDCHECK.target_position = Vector2(DIRECTION * 20, GROUNDCHECK.target_position.y)
-	
-func _on_timer_timeout() -> void:
-	print("kurac")
